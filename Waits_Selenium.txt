@@ -1,0 +1,56 @@
+Waits :
+
+https://demoqa.com/dynamic-properties
+
+Implicit wait 
+=============
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10))
+
+drive.findElemnt().click();
+drive.findElemnt().click();
+drive.findElemnt().click();
+drive.findElemnt().click();
+
+Explicit Wait:
+==============
+1)waits for a specific condition to be true for specific element 
+2)WebDriverWait 
+
+
+WebDriverWait wait = new WebDriverWait(driver,Duration.OfSeconds(15));
+WebElement element =wait.until(ExpectedContions.visibilityOfElementLocated(By.xpath(""));
+
+TimeoutException
+
+
+Fluent wait 
+============
+
+setting for polling time 
+ignoring the exceptions 
+
+FluentWait wait = new FluentWait(driver);
+wait.withTimeout(Duation.OfSeconds(15))
+.pollingEvery(Duration.OfMilliSeconds(250)
+.ignoring(NoSuchElementException.class);
+
+TimeoutException
+
+Thread.sleep(2000) - uninterrupted exception 
+
+it will pause you execution unconditionally 
+
+
+Page Load timeout:
+=================
+wait for the whole page to load completely 
+driver.manage().timeouts().pageLoadTimeout(Duration.ofSeonds(30));
+
+
+Script Timeout
+=============
+driver.manage().timeouts().scriptTimeOut(Duration.OfSeonds(10));
+
+)
+
+
